@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<style>
+			input[type=submit]
+			{
+				background-Color:#4CAF50;
+				color:white;
+				padding:10px 20px;
+				border:none;
+				border-radius: 4px;
+			}
+			input[type=reset]
+			{
+				background-Color:#4CAF50;
+				color:white;
+				padding:10px 20px;
+				border:none;
+				border-radius: 4px;
+			}
+		.bg {
+			  /* The image used */
+			  background-image: url("img2.jpg");
+
+			  /* Full height */
+			  height: 100%; 
+
+			  /* Center and scale the image nicely */
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			}
+
+		</style>
+	</head>	
+<script>  
+function validation(){  
+				var user_name=document.myform.user_name.value;  
+				var password=document.myform.password.value;  
+				  
+					if (user_name==null || user_name=="")
+					{  
+						alert("USERNAME can't be blank.....");  
+						return false;  
+					}else if(password.length<6)
+					{  
+					  alert("Password must be at least 6 characters long....");  
+					  return false;  
+					} 
+					if(user_name=="abhi"&& password=="12345678")
+					{
+						window.open("indexpage.html");
+						return true;
+					} 
+					else
+					{
+						alert("Enter corrcet Username and password");
+					}  
+					} 
+
+</script>  
+<body class="bg">  
+	<div class="container">
+		<form name="myform" method="post"  onsubmit=" return validation()">
+			<center> 
+				<h1>Airline Reservation System <font Color="red"> India</font></h1><br><br>
+			<center>
+			<h1> LOGIN <font Color="red">  HERE</font></h1>
+			<h3>USERNAME:-<input type="text" name="user_name"  value="" ><br><br>
+				PASSWORD:-<input type="password" name="password" value="" ><br><br>
+				<input type="submit" name="submit" value="LOG IN">
+				<input type="reset" name="reset" value="RESET">
+			</h3>
+		</form> 
+</body>
+</html>
+
+
+
+
+
